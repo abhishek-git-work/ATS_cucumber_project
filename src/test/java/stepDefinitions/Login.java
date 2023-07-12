@@ -17,13 +17,13 @@ public class Login extends driverFactory{
 		driver.findElement(By.linkText("Login or register")).click();
 	}
 
-	@When("^user enters valid login name (.+) into login name field$")
+	@When("user enters valid login name {} into login name field")
 	public void user_enters_valid_login_name_into_login_name_field(String validLoginNameText) {
 	   
 		driver.findElement(By.xpath("//input[@name='loginname']")).sendKeys(validLoginNameText);
 	}
 
-	@And("^user enters valid password (.+) into password field$")
+	@And("user enters valid password {} into password field")
 	public void user_enters_valid_password_into_password_field(String validPasswordText) {
 	   
 		driver.findElement(By.xpath("//input[@name='password']")).sendKeys(validPasswordText);

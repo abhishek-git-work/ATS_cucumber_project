@@ -11,7 +11,10 @@ import io.cucumber.junit.CucumberOptions;
 				features="src/test/resources/features",
 				glue={"stepDefinitions","hooks"},
 				publish=true,
-				plugin = {"pretty", "html:target/Cucumber-reports.html"}	
+				plugin = {"pretty", "html:target/Cucumber-reports.html"},
+				tags = "@all"
+//				tags = "@validcredentials or @invalidcredentials" ----this two scenario will run
+//				tags = "not @login"  --------all scenarios excluding login scenarios will run
 		)
 
 

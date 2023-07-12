@@ -1,8 +1,10 @@
+@all @registration
 Feature: Registration functionality
 
 Background: common first step
 Given user navigates to registration page
 
+@fillingallfields
 Scenario: user creates account by filling all fields
 #Given user navigates to registration page (cover in Background)
 When user enters below details into respective fields
@@ -25,6 +27,7 @@ And agrees to privacy policy
 And clicks on continue button
 Then new user account should be created
 
+@fillingduplicateloginname
 Scenario: user creates account by filling duplicate login name
 #Given user navigates to registration page (cover in Background)
 When user enters below details into respective fields with duplicate login name
